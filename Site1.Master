@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="TelerikWebApp1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+             <telerik:RadScriptManager runat="server" ID="RadScriptManager1" />
+   <%-- <telerik:RadSkinManager ID="RadSkinManager1" runat="server" ShowChooser="true" />--%>
+    <div class="demo-container no-bg">
+        <telerik:RadMenu RenderMode="Lightweight" ID="RadMenu1" CssClass="mainMenu" runat="server" ShowToggleHandle="true">
+            <Items>
+                <telerik:RadMenuItem Text="Home" NavigateUrl="Paginas/Home.aspx" />
+            <%--    <telerik:RadMenuItem Text="Products">
+                    <GroupSettings Width="200px" />
+                    <Items>
+                        <telerik:RadMenuItem Text="Chairs" NavigateUrl="DefaultCS.aspx?page=chairs" EnableImageSprite="true" CssClass="icon-chair"></telerik:RadMenuItem>
+                        <telerik:RadMenuItem Text="Sofas" NavigateUrl="DefaultCS.aspx?page=sofas" EnableImageSprite="true" CssClass="icon-sofa"></telerik:RadMenuItem>
+                        <telerik:RadMenuItem Text="Tables" NavigateUrl="DefaultCS.aspx?page=tables" EnableImageSprite="true" CssClass="icon-table"></telerik:RadMenuItem>
+                    </Items>
+                </telerik:RadMenuItem>--%>
+                <telerik:RadMenuItem Text="Cadastros" NavigateUrl="Paginas/Cadastros.aspx" />
+                <telerik:RadMenuItem Text="ChatBoot" NavigateUrl="Paginas/ChatBotNovo.aspx" />
+            </Items>
+        </telerik:RadMenu>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
